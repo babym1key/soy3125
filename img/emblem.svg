@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 120" role="img" aria-label="다시 피어나는 강원 상징">
+  <!-- 불꽃 + 땅(물결) + 새싹: 불이 꺼진 땅에서 다시 피어나는 강원 -->
+  <defs>
+    <linearGradient id="flame" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#c8442b"/>
+      <stop offset="0.6" stop-color="#e67a2e"/>
+      <stop offset="1" stop-color="#f4a640"/>
+    </linearGradient>
+    <linearGradient id="band" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d9622f"/>
+      <stop offset="1" stop-color="#e9a13b"/>
+    </linearGradient>
+  </defs>
+  <path d="M63 54 C44 50 42 32 52 18 C54 28 60 30 62 24 C60 14 66 6 72 2 C70 14 82 20 82 34 C86 30 87 24 86 20 C94 32 90 52 63 54 Z" fill="url(#flame)"/>
+  <path d="M66 52 C58 48 58 40 64 32 C66 38 70 38 72 34 C76 40 74 50 66 52 Z" fill="#fbd58a" opacity="0.85"/>
+  <path d="M14 58 A51 51 0 0 0 116 58" fill="none" stroke="#5b7f3a" stroke-width="5.5" stroke-linecap="round"/>
+  <path d="M14 58 C40 46 66 72 116 56" fill="none" stroke="#5b7f3a" stroke-width="5.5" stroke-linecap="round"/>
+  <path d="M20 76 C44 62 70 90 110 70" fill="none" stroke="url(#band)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M30 92 C50 82 72 104 100 86" fill="none" stroke="#5b7f3a" stroke-width="5" stroke-linecap="round"/>
+  <path d="M112 56 C110 46 118 38 128 38 C128 48 122 56 112 56 Z" fill="#3f7d3f"/>
+  <path d="M112 56 C116 50 120 46 126 41" fill="none" stroke="#2b5a2c" stroke-width="1.5"/>
+</svg>

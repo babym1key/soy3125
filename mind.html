@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>마음 회복 - 산불 이후 회복 안내</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/print.css">
+</head>
+<body data-page="mind">
+  <main class="wrap">
+    <div class="page-title">
+      <h1>💚 마음 회복</h1>
+      <p>큰일을 겪은 뒤 마음이 힘든 것은 자연스러운 일이에요. 혼자 참지 않아도 괜찮아요.</p>
+    </div>
+
+    <h2>먼저 이곳에 전화하세요 (무료)</h2>
+    <div class="place-grid" id="featured"></div>
+
+    <h2 style="margin-top:12px">이런 일이 생길 수 있어요</h2>
+    <div class="symptom-grid" id="symptoms"></div>
+    <p class="meta" id="symptom-meta"></p>
+
+    <section class="alert">
+      <h2>이럴 때는 꼭 도움을 받으세요</h2>
+      <ul>
+        <li>한 달이 지나도 잠을 거의 못 잘 때</li>
+        <li>식사, 일, 외출 같은 일상생활이 어려울 때</li>
+        <li>술이나 약에 기대게 될 때</li>
+        <li>살고 싶지 않다는 생각이 들 때 → <strong>1577-0199</strong>(24시간), <strong>109</strong>(자살예방상담), 위급하면 <strong>119</strong></li>
+      </ul>
+    </section>
+
+    <h2>다른 상담 전화</h2>
+    <div class="place-grid" id="centers"></div>
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="data/mind.js"></script>
+  <script src="js/render.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("featured").innerHTML = MIND_FEATURED.map(function (c) {
+        return placeCard(c, true);
+      }).join("");
+      document.getElementById("symptoms").innerHTML = MIND_SYMPTOMS.map(function (s) {
+        return '<div class="symptom"><strong>' + safeText(s.title) + "</strong>" + safeText(s.desc) + "</div>";
+      }).join("");
+      document.getElementById("symptom-meta").outerHTML = metaLine(MIND_SOURCE.source);
+      document.getElementById("centers").innerHTML = MIND_CENTERS.map(function (c) {
+        return placeCard(c);
+      }).join("");
+    });
+  </script>
+</body>
+</html>

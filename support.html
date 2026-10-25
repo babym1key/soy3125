@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>지원 제도 - 산불 이후 회복 안내</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/print.css">
+</head>
+<body data-page="support">
+  <main class="wrap">
+    <div class="page-title">
+      <h1>📄 분야별 지원 제도</h1>
+      <p>분야를 누르면 그 분야의 지원만 보여요.</p>
+    </div>
+    <div class="tabs" id="support-tabs" role="tablist" aria-label="지원 분야"></div>
+    <div id="support-list"></div>
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="data/support.js"></script>
+  <script src="js/render.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", initSupportPage);</script>
+</body>
+</html>

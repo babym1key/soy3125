@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>자주 묻는 질문 - 산불 이후 회복 안내</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/print.css">
+</head>
+<body data-page="faq">
+  <main class="wrap">
+    <div class="page-title">
+      <h1>❓ 자주 묻는 질문</h1>
+      <p>질문을 누르면 답이 펼쳐져요.</p>
+    </div>
+    <div id="faq-list"></div>
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="data/faq.js"></script>
+  <script src="js/render.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("faq-list").innerHTML = FAQ.map(faqItem).join("");
+    });
+    // 인쇄할 때는 모든 답을 펼침
+    window.addEventListener("beforeprint", function () {
+      document.querySelectorAll("details.faq").forEach(function (d) { d.open = true; });
+    });
+  </script>
+</body>
+</html>

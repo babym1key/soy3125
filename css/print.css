@@ -1,0 +1,41 @@
+/* 인쇄용 화면: 메뉴와 버튼은 숨기고 내용만 흑백으로 */
+@media print {
+  html, html.fs-small, html.fs-large { font-size: 13pt; }
+  body { background: #fff; color: #000; padding: 0; }
+
+  .site-header .tools,
+  .main-nav,
+  .bottom-nav,
+  .menu-sheet,
+  .tabs,
+  .no-print,
+  .finder-nav,
+  .yn { display: none !important; }
+
+  .site-header { position: static; border-bottom: 2px solid #000; }
+  .logo-mark { border: 1px solid #000; background: #fff; color: #000; }
+
+  .card, .hero, .symptom, details.faq, .notice-strip, .quick {
+    box-shadow: none;
+    border: 1px solid #000;
+    background: #fff;
+    color: #000;
+    break-inside: avoid;
+  }
+  .quick-grid { display: none; }
+  .hero h1 strong { color: #000; }
+
+  a { color: #000; text-decoration: underline; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.85em; }
+
+  mark.need { background: none; border: 1px solid #000; }
+
+  /* 접힌 질문도 모두 펼쳐서 인쇄 */
+  details.faq .answer { display: block !important; }
+  details.faq summary::after { content: ""; }
+
+  .footer-notice { background: #fff; color: #000; border: 2px solid #000; }
+  .print-only { display: block !important; }
+}
+
+.print-only { display: none; }

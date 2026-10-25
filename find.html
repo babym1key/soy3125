@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>지원 찾기 - 산불 이후 회복 안내</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/print.css">
+</head>
+<body data-page="find">
+  <main class="wrap">
+    <div class="page-title">
+      <h1>🔍 나에게 맞는 지원 찾기</h1>
+      <p>질문에 '예' 또는 '아니요'만 누르세요. 해당하는 지원만 골라 보여 드려요.</p>
+    </div>
+    <div class="finder">
+      <div id="finder"></div>
+      <div id="finder-results"></div>
+    </div>
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="data/support.js"></script>
+  <script src="data/finder.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/finder.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", initFinder);</script>
+</body>
+</html>

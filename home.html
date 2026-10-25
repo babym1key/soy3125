@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>할 일 확인 - 산불 이후 회복 안내</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/print.css">
+</head>
+<body data-page="home">
+  <main class="wrap">
+    <section class="card" aria-labelledby="check-title">
+      <h1 id="check-title" style="font-size:1.4rem">지금 무엇을 해야 할까요?</h1>
+      <div class="tabs" id="period-tabs" role="tablist" aria-label="시기 고르기"></div>
+      <p id="period-intro" style="font-weight:700"></p>
+      <div class="progress">
+        <div class="progress-bar"><span id="progress-bar"></span></div>
+        <span class="progress-text" id="progress-text"></span>
+      </div>
+      <ul class="check-list" id="check-list"></ul>
+      <p class="meta">출처: 행정안전부·강원특별자치도 재난 대응 안내를 바탕으로 정리</p>
+    </section>
+
+    <div class="notice-strip">
+      <span class="dot" aria-hidden="true"></span>
+      <span>어디에 물어볼지 모르겠다면 국번 없이 <strong>110</strong>(정부민원안내콜센터)</span>
+      <a class="btn ghost no-print" href="contact.html" style="margin-left:auto;min-height:2.6rem">☎ 지원 창구 보기</a>
+    </div>
+
+    <h2 style="margin-top:28px">바로 가기</h2>
+    <div class="quick-grid">
+      <a class="quick" href="find.html">
+        <span class="q-ico" aria-hidden="true">🔍</span>
+        <div><strong>나에게 맞는 지원 찾기</strong><span>질문 4개로 알아보기</span></div>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="quick" href="support.html">
+        <span class="q-ico" aria-hidden="true">📄</span>
+        <div><strong>분야별 지원 제도</strong><span>생활·주거·농업·가게·세금</span></div>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="quick" href="mind.html">
+        <span class="q-ico" aria-hidden="true">💚</span>
+        <div><strong>마음 회복</strong><span>잠이 안 오고 불안할 때</span></div>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+    </div>
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="data/checklist.js"></script>
+  <script src="js/checklist.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", initChecklist);</script>
+</body>
+</html>
